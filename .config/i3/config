@@ -156,6 +156,11 @@ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set 5%+
 # Set background
 exec --no-startup-id feh --bg-scale $HOME/dotfiles/wallpapers/mountain.jpg
 
+# Borders
+default_border pixel 2
+gaps outer 2
+gaps inner 6
+smart_gaps on
 
 
 # reload the configuration file
