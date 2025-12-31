@@ -17,5 +17,12 @@ pacman -S git
 pacman -S stow
 ```
 
+```shell
+stow -v .config zsh wallpapers
+```
+
+
+
 ## Installation
 
+ttf-hack-nerd
