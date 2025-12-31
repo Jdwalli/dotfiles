@@ -26,3 +26,4 @@ stow -v .config zsh wallpapers
 ## Installation
 
 ttf-hack-nerd
+rofi
