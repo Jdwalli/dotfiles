@@ -103,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export TERMINAL=itty
+export TERMINAL=kitty
 export EDITOR=nano
 
 if [[ -n $DISPLAY && $- == *i* ]]; then

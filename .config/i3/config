@@ -198,7 +198,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Compositor
-exec --no-startup-id picom --config ~/.config/picom/picom.conf
+# exec --no-startup-id picom --config ~/.config/picom/picom.conf
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
