@@ -1,40 +1,51 @@
 # Joshua's Dotfiles
+This repository contains most of the relevant dotfiles for my Arch Linux setup and configuration. 
 
-This directory contains the dotfiles for my Arch Linux laptop
-
-
-## Requirements 
-
-
-### Git
-
-```shell
-pacman -S git
-```
-
-### Stow
-```shell
-pacman -S stow
-```
-
-```shell
-stow -v .config zsh wallpapers
-```
-
-
+## System Information
+**Display Server:** X11  
+**Window Manager:** i3  
+**Compositor:** Picom  
+**Shell:** Zsh  
+**Terminal:** Kitty  
+**Menu/Launcher:** Rofi  
+**Audio:** Pipewire + Wireplumber  
+**Network:** NetworkManager  
+**Bluetooth:** Bluez  
+**Wallpaper:** feh  
+**Terminal Decoration:** Starship  
 
 ## Installation
+### Prerequisites
+Clone this repository:
+```bash
+git clone https://github.com/yourusername/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+```
 
-ttf-hack-nerd
-rofi
+### Using GNU Stow
 
-# Project Title
+This repository uses GNU Stow for symlink management:
+```bash
+# Install all configs
+stow .
+```
 
-A brief description of what this project does and who it's for
+### Zsh Plugins
+This setup uses  Zsh plugins for enhanced shell experience:
 
-ZSH 
-https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
+#### zsh-autosuggestions
+https://github.com/zsh-users/zsh-autosuggestions
 
-https://github.com/zsh-users/zsh-syntax-highlighting
+#### zsh-syntax-highlighting
+https://github.com/zsh-users/zsh-syntax-highlighting.git 
 
-Starship 
+### Fonts
+- `ttf-jetbrains-mono`
+- `ttf-hack-nerd`
+- `ttf-firacode-nerd`
+
+## Notes
+- AMD GPU setup with AMDGPU drivers
+- TLP configured for laptop power management
+- Pipewire for audio (replaces PulseAudio)
+
