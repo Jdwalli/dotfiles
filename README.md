@@ -30,6 +30,10 @@ This repository uses GNU Stow for symlink management:
 stow .
 ```
 
+### Rofi Configurations
+In addition to rofi, I also installed emojis 
+https://github.com/Mange/rofi-emoji
+
 ### Zsh Plugins
 This setup uses  Zsh plugins for enhanced shell experience:
 
@@ -43,7 +47,7 @@ https://github.com/zsh-users/zsh-syntax-highlighting.git
 - `ttf-jetbrains-mono`
 - `ttf-hack-nerd`
 - `ttf-firacode-nerd`
-
+- `noto-fonts-emoji`
 ## Notes
 - AMD GPU setup with AMDGPU drivers
 - TLP configured for laptop power management

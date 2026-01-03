@@ -54,13 +54,24 @@ bindsym $mod+Return exec kitty
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start rofi (dmenu replacement)
-bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons
-# A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+# Start clipboard manager
+exec --no-startup-id clipmenud
+
+# Application Launchers (rofi: dmenu replacement) 
+# NOTE: i3-demu-desktop
+
+# Launch desktop applications
+bindsym $mod+d exec --no-startup-id rofi -show drun
+
+# Launch command runner
+bindsym $mod+Shift+d exec --no-startup-id rofi -show run
+
+# Launch window switcher
+bindsym $mod+Tab exec --no-startup-id rofi -show window
+
+# Launch emoji picker 
+bindsym $mod+period exec --no-startup-id rofi -show emoji --action copy
+
 
 # change focus
 bindsym $mod+j focus left
