@@ -13,6 +13,9 @@ This repository contains most of the relevant dotfiles for my Arch Linux setup a
 **Bluetooth:** Bluez  
 **Wallpaper:** feh  
 **Terminal Decoration:** Starship  
+**Screenshot Tool:** Flameshot
+**Notification Daemon:** Dunst
+
 
 ## Installation
 ### Prerequisites
