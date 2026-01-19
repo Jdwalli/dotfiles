@@ -48,6 +48,9 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym XF86AudioStop exec --no-startup-id playerctl stop
 
 
+exec --no-startup-id acpi_listen | grep --line-buffered "button/lid" | while read -r; do ~/.local/bin/lid-handling.sh; done &
+exec --no-startup-id sleep 2 && autorandr --change --default mobile && ~/.local/bin/restore-wallpaper.sh
+
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -55,8 +58,6 @@ floating_modifier $mod
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
-
-exec --no-startup-id xrandr --output eDP --primary --mode 1920x1200 --output HDMI-A-0 --auto --right-of eDP
 
 # start a terminal
 bindsym $mod+Return exec kitty
@@ -183,7 +184,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set 5%+
 
 # Set background
-exec --no-startup-id feh --bg-scale $HOME/dotfiles/wallpapers/mountain.jpg
+exec --no-startup-id feh --bg-scale $DEFAULT_WALLPAPER_PATH
 
 # Borders
 default_border pixel 2

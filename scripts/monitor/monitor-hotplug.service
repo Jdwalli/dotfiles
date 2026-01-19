@@ -1,0 +1,13 @@
+[Unit]
+Description=Monitor hotplug handler
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/home/jdwalli/.local/bin/monitor-hotplug-daemon.sh
+Restart=on-failure
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/jdwalli/.Xauthority
+
+[Install]
+WantedBy=graphical-session.target
