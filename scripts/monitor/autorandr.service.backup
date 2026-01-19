@@ -1,0 +1,13 @@
+# Saved to: ~/.config/systemd/user/autorandr.service
+[Unit]
+Description=Autorandr monitor configuration
+Wants=display-manager.service
+After=display-manager.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/autorandr --change --default mobile
+RemainAfterExit=yes
+
+[Install]
+WantedBy=graphical-session.target
